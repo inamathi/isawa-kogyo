@@ -12,7 +12,7 @@ const MainContents = () => {
       <div className={`${styles.splash} bg-slate-900`}>
         <Header />
         <div className="backdrop-blur-sm">
-          <div className="py-4">
+          <div className="py-4 max-md:py-16">
             <BtnRecruit href={"/inquery"} />
           </div>
         </div>
@@ -23,11 +23,14 @@ const MainContents = () => {
         </h2>
         <dl className="text-slate-800 container mx-auto pb-16">
           {overview.map((dataitem: TypeData) => (
-            <div key={dataitem.index} className="flex gap-4 items-start">
-              <dt className="w-2/5 flex justify-end p-2 after:content-[':'] after:ml-2">
+            <div
+              key={dataitem.index}
+              className="flex gap-4 items-start max-md:flex-col max-md:px-4 max-md:gap-0"
+            >
+              <dt className="w-2/5 flex justify-end p-2 after:content-[':'] after:ml-2 font-bold max-md:w-full max-md:justify-start">
                 {dataitem.label}
               </dt>
-              <dd className="p-2 flex-1">
+              <dd className="p-2 flex-1 max-md:pt-0">
                 {/* 定義型リスト表示 */}
                 {dataitem.data}
                 {dataitem.definitionList &&
@@ -35,7 +38,9 @@ const MainContents = () => {
                     <dl>
                       {dataitem.definitionList.map((dlitem, index) => (
                         <div key={index} className="flex gap-2 mb-2">
-                          <dt className="after:ml-2">{dlitem.dt}</dt>
+                          <dt className="after:ml-2 max-md:whitespace-nowrap max-md:after:ml-0">
+                            {dlitem.dt}
+                          </dt>
                           <dd className="flex justify-start w-[200px]">
                             {dlitem.dd}
                           </dd>

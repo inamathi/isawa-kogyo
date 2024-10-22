@@ -22,7 +22,7 @@ const InqueryForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="w-1/3 mx-auto flex flex-col gap-4"
+        className="w-1/3 mx-auto flex flex-col gap-4 max-md:w-full max-md:px-4"
       >
         {/* 名前 */}
         <FormField

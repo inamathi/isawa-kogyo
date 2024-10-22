@@ -2,10 +2,21 @@
   width: 50%;
   margin: 40px auto;
 }
+@media screen and (max-width: 768px) {
+  .recruitInfo {
+    width: 100%;
+    padding: 20px;
+  }
+}
 .recruitInfo > div {
   display: flex;
   gap: 20px;
   margin: 10px 0;
+}
+@media screen and (max-width: 768px) {
+  .recruitInfo > div {
+    gap: 5px;
+  }
 }
 .recruitInfo > div > dt {
   font-weight: bold;
@@ -14,6 +25,14 @@
   padding-right: 20px;
   text-align: right;
   flex: 1;
+}
+@media screen and (max-width: 768px) {
+  .recruitInfo > div > dt {
+    text-align: left;
+    border-right: none;
+    border-left: solid 2px #ccdfee;
+    padding-left: 20px;
+  }
 }
 .recruitInfo > div > dd {
   flex: 3;

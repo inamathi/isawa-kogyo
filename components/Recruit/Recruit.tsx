@@ -5,8 +5,10 @@ const Reqruit = () => {
   return (
     <div className="mx-auto my-8">
       <dl className={`${styles.recruitInfo} text-slate-800`}>
-        <div className="flex gap-4">
-          <dt className="text-nowrap text-slate-600">募集職種</dt>
+        <div className="flex gap-4 max-md:flex-col">
+          <dt className="text-nowrap text-slate-600 max-md:text-left">
+            募集職種
+          </dt>
           <dd>
             <dl>
               <div>
@@ -32,7 +34,7 @@ const Reqruit = () => {
             </dl>
           </dd>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 max-md:flex-col">
           <dt className="text-nowrap text-slate-600">給与</dt>
           <dd>
             <ul>
@@ -42,7 +44,7 @@ const Reqruit = () => {
             </ul>
           </dd>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 max-md:flex-col">
           <dt className="text-nowrap text-slate-600">勤務地</dt>
           <dd>
             <ul>
@@ -50,7 +52,7 @@ const Reqruit = () => {
             </ul>
           </dd>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 max-md:flex-col">
           <dt className="text-nowrap text-slate-600">特記</dt>
           <dd>
             <ul>

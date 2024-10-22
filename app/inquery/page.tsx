@@ -1,7 +1,7 @@
 import Header from "@/components/header/Header";
 import InqueryForm from "@/components/InqueryForm/InqueryForm";
 import styles from "./styles.module.scss";
-import Reqruit from "@/components/Reqruit/Reqruit";
+import Recruit from "@/components/Recruit/Recruit";
 import Footer from "@/components/footer/Footer";
 
 const Inquery = () => {
@@ -14,7 +14,7 @@ const Inquery = () => {
       <div className="container mx-auto my-16">
         <h2 className={`${styles.heading1} text-slate-800`}>
           募集内容<span></span>
-          <Reqruit />
+          <Recruit />
         </h2>
         <h2 className={`${styles.heading1} text-slate-800`}>
           お問い合わせ<span></span>
