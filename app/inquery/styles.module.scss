@@ -1,0 +1,24 @@
+.splash {
+  background-image: url("/image/img_top.webp");
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.heading1 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin: 20px auto 40px;
+  text-align: center;
+  position: relative;
+  span {
+    position: relative;
+    display: block;
+    width: 32px;
+    height: 4px;
+    background: #ccc282;
+    bottom: -10px;
+    margin: auto;
+  }
+}
