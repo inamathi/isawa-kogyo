@@ -11,15 +11,17 @@ const Inquery = () => {
         <Header />
         <div className="backdrop-blur-sm"></div>
       </div>
-      <div className="container mx-auto my-16">
-        <h2 className={`${styles.heading1} text-slate-800`}>
-          募集内容<span></span>
-          <Recruit />
-        </h2>
-        <h2 className={`${styles.heading1} text-slate-800`}>
-          お問い合わせ<span></span>
-        </h2>
-        <InqueryForm />
+      <div className="bg-slate-100">
+        <div className="container mx-auto py-16">
+          <h2 className={`${styles.heading1} text-slate-800`}>
+            募集内容<span></span>
+            <Recruit />
+          </h2>
+          <h2 className={`${styles.heading1} text-slate-800`}>
+            お問い合わせ<span></span>
+          </h2>
+          <InqueryForm />
+        </div>
       </div>
       <Footer />
     </>

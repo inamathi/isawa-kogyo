@@ -17,7 +17,7 @@ const MainContents = () => {
           </div>
         </div>
       </div>
-      <div className="py-16 bg-slate-200">
+      <div className="py-16 bg-slate-100">
         <h2 className={`${styles.heading1} text-slate-800`}>
           会社概要<span></span>
         </h2>
