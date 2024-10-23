@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Form,
   FormControl,
@@ -14,12 +14,50 @@ import { Textarea } from "@/components/ui/textarea";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { useInqueryForm } from "@/hooks/useInqueryForm";
+import { PulseLoader } from "react-spinners";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const InqueryForm = () => {
   const { form, onSubmit } = useInqueryForm();
 
+  useEffect(() => {
+    if (form.formState.isSubmitSuccessful) {
+      toast.success("メールを送信しました", {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+
+      // Toastが表示された後にリロード
+      const timer = setTimeout(() => {
+        window.location.reload();
+      }, 5000); //ToastのautoCloseと同期
+
+      // タイマーをクリア
+      return () => clearTimeout(timer);
+    }
+  }, [form.formState.isSubmitSuccessful]);
+
   return (
     <Form {...form}>
+      <ToastContainer
+        position="bottom-left"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
       <form
         onSubmit={form.handleSubmit(onSubmit)}
         className="w-1/3 mx-auto flex flex-col gap-4 max-md:w-full max-md:px-4"
@@ -134,7 +172,13 @@ const InqueryForm = () => {
             </FormItem>
           )}
         />
-        <Button>送 信</Button>
+        <Button type="submit" disabled={form.formState.isSubmitting}>
+          {form.formState.isSubmitting ? (
+            <PulseLoader color="#a0a7b1" />
+          ) : (
+            "送信"
+          )}
+        </Button>
       </form>
     </Form>
   );
