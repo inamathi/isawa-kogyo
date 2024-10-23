@@ -34,7 +34,7 @@ const Reqruit = () => {
             </dl>
           </dd>
         </div>
-        <div className="flex gap-4 max-md:flex-col">
+        {/* <div className="flex gap-4 max-md:flex-col">
           <dt className="text-nowrap text-slate-600">給与</dt>
           <dd>
             <ul>
@@ -43,7 +43,7 @@ const Reqruit = () => {
               <li>賞与：年２回（４ヶ月）</li>
             </ul>
           </dd>
-        </div>
+        </div> */}
         <div className="flex gap-4 max-md:flex-col">
           <dt className="text-nowrap text-slate-600">勤務地</dt>
           <dd>
