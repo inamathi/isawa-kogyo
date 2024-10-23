@@ -11,3 +11,12 @@ export interface TypeData {
     dd: string;
   }[];
 }
+
+export interface TypeInqueryValues {
+  username: string;
+  age: number;
+  gender: string;
+  email: string;
+  subject: string;
+  content: string;
+}

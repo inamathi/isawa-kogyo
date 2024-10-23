@@ -10,7 +10,7 @@ export async function POST(request: Request) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: "石和工業有限会社 <no-reply@isawa-kogyo.com>",
+      from: "有限会社 石和工業 <no-reply@isawa-kogyo.com>",
       to: ["info@isawa-kogyo.com", email],
       subject: "お問い合わせフォームより送信",
       react: EmailTemplate({

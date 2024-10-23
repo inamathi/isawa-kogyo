@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "石和工業 有限会社",
-  description: "石和工業のウェブサイト",
+  title: "有限会社 石和工業",
+  description: "石和工業では新たな人材を募集しています",
 };
 
 export default function RootLayout({
