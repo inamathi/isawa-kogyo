@@ -11,7 +11,7 @@ export async function POST(request: Request) {
   try {
     const { data, error } = await resend.emails.send({
       from: "有限会社 石和工業 <no-reply@isawa-kogyo.com>",
-      to: ["info@isawa-kogyo.com", email],
+      to: ["info@email.isawa-kogyo.com", email],
       subject: "お問い合わせフォームより送信",
       react: EmailTemplate({
         username: username,
