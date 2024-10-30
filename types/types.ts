@@ -14,7 +14,7 @@ export interface TypeData {
 
 export interface TypeInqueryValues {
   username: string;
-  age: number;
+  age: string;
   gender: string;
   email: string;
   subject: string;

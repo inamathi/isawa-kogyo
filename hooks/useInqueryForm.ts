@@ -2,6 +2,7 @@ import { formSchema } from "@/lib/formSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useCallback } from "react";
 import { useForm } from "react-hook-form";
+import { TypeInqueryValues } from "@/types/types";
 
 export const useInqueryForm = () => {
   const form = useForm({
@@ -16,7 +17,7 @@ export const useInqueryForm = () => {
     },
   });
 
-  const onSubmit = useCallback(async (values: any) => {
+  const onSubmit = useCallback(async (values: TypeInqueryValues) => {
     const { username, age, gender, email, subject, content } = values;
     try {
       await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/send`, {
