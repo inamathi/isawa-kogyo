@@ -20,7 +20,7 @@ export const useInqueryForm = () => {
   const onSubmit = useCallback(async (values: TypeInqueryValues) => {
     const { username, age, gender, email, subject, content } = values;
     try {
-      await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/send`, {
+      await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/send/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
