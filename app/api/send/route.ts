@@ -7,7 +7,6 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request: Request) {
   const { username, age, gender, email, subject, content } =
     await request.json();
-
   try {
     const { data, error } = await resend.emails.send({
       from: "有限会社 石和工業 <no-reply@isawa-kogyo.com>",
@@ -25,7 +24,6 @@ export async function POST(request: Request) {
     if (error) {
       return NextResponse.json({ error });
     }
-
     return Response.json(data);
   } catch (error) {
     return NextResponse.json({ error });
