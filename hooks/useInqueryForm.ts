@@ -34,6 +34,7 @@ export const useInqueryForm = () => {
           content,
         }),
       });
+      console.log(values);
     } catch (err) {
       console.error(err);
     }
