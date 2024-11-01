@@ -13,13 +13,13 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { useInqueryForm } from "@/hooks/useInqueryForm";
 import { PulseLoader } from "react-spinners";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useInquiryForm } from "@/hooks/useInquiryForm";
 
-const InqueryForm = () => {
-  const { form, onSubmit } = useInqueryForm();
+const InquiryForm = () => {
+  const { form, onSubmit } = useInquiryForm();
 
   useEffect(() => {
     if (form.formState.isSubmitSuccessful) {
@@ -184,4 +184,4 @@ const InqueryForm = () => {
   );
 };
 
-export default InqueryForm;
+export default InquiryForm;

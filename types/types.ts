@@ -12,7 +12,7 @@ export interface TypeData {
   }[];
 }
 
-export interface TypeInqueryValues {
+export interface TypeInquiryValues {
   username: string;
   age: string;
   gender: string;

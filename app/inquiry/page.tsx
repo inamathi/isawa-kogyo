@@ -1,11 +1,11 @@
 import Header from "@/components/header/Header";
-import InqueryForm from "@/components/InqueryForm/InqueryForm";
+import InquiryForm from "@/components/InquiryForm/InquiryForm";
 import styles from "./styles.module.scss";
 import Recruit from "@/components/Recruit/Recruit";
 import Footer from "@/components/footer/Footer";
 import JsonLD from "@/components/jsonLD";
 
-const Inquery = () => {
+const Inquiry = () => {
   return (
     <>
       <JsonLD />
@@ -34,7 +34,7 @@ const Inquery = () => {
           <h2 className={`${styles.heading1} text-slate-800`}>
             お問い合わせ<span></span>
           </h2>
-          <InqueryForm />
+          <InquiryForm />
         </div>
       </div>
       <Footer />
@@ -42,4 +42,4 @@ const Inquery = () => {
   );
 };
 
-export default Inquery;
+export default Inquiry;
