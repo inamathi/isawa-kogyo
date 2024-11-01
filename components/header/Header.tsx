@@ -24,7 +24,7 @@ const Header = () => {
               <Link href="/">会社概要</Link>
             </li>
             <li className="text-[16px] max-md:text-[14px] font-bold hover:text-blue-300">
-              <Link href="/inquery">求人のご案内・お問い合わせ</Link>
+              <Link href="/inquiry">求人のご案内・お問い合わせ</Link>
             </li>
           </ul>
         </div>

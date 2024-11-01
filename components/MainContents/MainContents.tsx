@@ -13,7 +13,7 @@ const MainContents = () => {
         <Header />
         <div className="backdrop-blur-sm">
           <div className="py-4 max-md:py-16">
-            <BtnRecruit href={"/inquery"} />
+            <BtnRecruit href={"/inquiry"} />
           </div>
         </div>
       </div>
