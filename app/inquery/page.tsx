@@ -3,10 +3,12 @@ import InqueryForm from "@/components/InqueryForm/InqueryForm";
 import styles from "./styles.module.scss";
 import Recruit from "@/components/Recruit/Recruit";
 import Footer from "@/components/footer/Footer";
+import JsonLD from "@/components/jsonLD";
 
 const Inquery = () => {
   return (
     <>
+      <JsonLD />
       <div className="bg-slate-900">
         <Header />
         <div className="backdrop-blur-sm"></div>
